@@ -65,25 +65,25 @@ const Get = () => {
 
     return (
         <>
-          
-            <img src={myImage} alt="" className='h-[100vh] w-[100%] absolute' />
-            <div className='flex bg-transparent relative'>
-                <div className='w-3/5 mt-20 mx-auto'>
-                    <form onSubmit={handleSubmit} className='mx-5'>
-                        <div class="relative mx-auto mb-4 flex mb-20">
-                            <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" required className="w-3/5 bg-white rounded border-none bg-transparent ring-2 border-gray-300 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-base text-lg focus:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+
+            <img src={myImage} alt="" className='h-[100%] w-[100%] absolute ' />
+            <div className='md:flex bg-transparent relative'>
+                <div className='md:w-3/5 md:mt-200 pt-8 mx-auto'>
+                    <form onSubmit={handleSubmit} className='md:mx-5 '>
+                        <div class="relative mx-auto flex md:mb-20 mb-5 ">
+                            <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" required className="md:w-3/5 bg-white rounded border-none bg-transparent ring-2 border-gray-300 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-base text-lg focus:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                             <button type="submit" className='inline-flex text-white bg-indigo-500 border-0 py- p-2 focus:outline-none hover:bg-indigo-600 rounded text-lg font-bold '>Get Weather</button>
                         </div>
-                        <div className='text-white pt-40'>
+                        <div className='text-white mt-20 lg:inline hidden'>
                             <div className="font-semibold text-8xl">{`${feel ? `${feel}℃` : ""}`}</div>
-                            {/* <div className={`font-semibold ${feel? "": "hidden"} text-4xl`}>{feel}</div> */}
+                            {/* <div className={`font-semibold ${feel ? "" : "hidden"} text-4xl`}>{feel}</div> */}
                             <div className='py-4 text-3xl'>{name} <span>{country}</span></div>
                             <div className='font-medium text-xl'>{descption} <span>❄🌬🌀🌈🌂☂🌊</span></div>
                         </div>
                     </form>
                 </div>
-                <div className='border border-gray-300 border-2 rounded-xl w-2/6 h-screen float-right pt px-10 bg-gray-950 opacity-60 sh text-white  shadow-2xl shadow-gray-500'>
-                    <div className='font-bold my-12 text-xl'>Weather Details</div>
+                <div className=' rounded-x lg:w-2/6 w-full  h-[100%] md:px-10 px-3 py-4 bg-gray-950 opacity-60 text-white  shadow-2xl shadow-gray-500'>
+                    <div className='font-bold md:my-12 my-4 md:text-start text-center text-xl'>Weather Details</div>
                     <div className='flex '>
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Location</div>
                         <div className='w-1/3 py-3 font-medium text-md opacity-100'>{name} <span>{country}</span></div>
@@ -92,15 +92,15 @@ const Get = () => {
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Description</div>
                         <div className='w-1/3 py-3 font-medium text-md'>{descption}</div>
                     </div>
-                    <div className='flex'>
-                        <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Pressure</div>
-                        <div className='w-1/3 py-3 font-medium text-md'>{pressure}</div>
-                    </div>
                     <div className='flex '>
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Humidity</div>
                         <div className='w-1/3 py-3 font-medium text-md'>{humidity}</div>
                     </div>
-                    <hr className='my-7' />
+                    <div className='flex'>
+                        <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Pressure</div>
+                        <div className='w-1/3 py-3 font-medium text-md'>{pressure}</div>
+                    </div>
+                    <hr className='md:my-7 my-5' />
                     <div className='flex '>
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Max</div>
                         <div className='w-1/3 py-3 font-medium text-md'>{max}</div>

@@ -1,6 +1,6 @@
 {
-    "name": "joke api",
-    "short_name": "joke api",
+    "name": "Weather-app",
+    "short_name": "Weather-app",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#fff",
