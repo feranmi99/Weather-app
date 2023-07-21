@@ -32,27 +32,14 @@ const Get = () => {
                 setmax(`${response.data.main.temp_max} ℃`)
                 setpressure(`${response.data.main.pressure}hpa`)
                 setfeel(Math.round(response.data.main.feels_like))
-                console.log(response.data.main.pressure);
+                // console.log(response.data.main.pressure);
                 console.log(response.data);
-                console.log(feel);
+                // console.log(feel);
             })
             .catch((error) => {
                 console.error('Error fetching weather data:', error);
             });
     };
-
-    useEffect(() => {
-        console.log(feel);
-        console.log(feel);
-    }, []);
-
-    // if(feel){
-    //     console.log(feel);
-    // }else{
-    //     console.log("Nothing Is here");
-    // }
-
-    // feel? console.log(feel): console.log("Nothing Is Here");
 
     const handleCityChange = (e) => {
         setCity(e.target.value);
@@ -68,21 +55,21 @@ const Get = () => {
 
             <img src={myImage} alt="" className='h-[100%] w-[100%] absolute ' />
             <div className='md:flex bg-transparent relative'>
-                <div className='md:w-3/5 md:mt-200 pt-8 mx-auto'>
-                    <form onSubmit={handleSubmit} className='md:mx-5 '>
-                        <div class="relative mx-auto flex md:mb-20 mb-5 ">
+                <div className='md:w-3/5 md:mt-200 pt-8 mx-auto md:ms-0 ms-5'>
+                    <form onSubmit={handleSubmit} className='md:mx-5'>
+                        <div class="relative mx-auto flex md:mb-32 mb-5 ">
                             <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" required className="md:w-3/5 bg-white rounded border-none bg-transparent ring-2 border-gray-300 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-base text-lg focus:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                            <button type="submit" className='inline-flex text-white bg-indigo-500 border-0 py- p-2 focus:outline-none hover:bg-indigo-600 rounded text-lg font-bold '>Get Weather</button>
+                            <button type="submit" className='inline-flex ring-2 text-white bg-indigo-500 border-0 py-1 p-1 md:p-2 focus:outline-none hover:bg-indigo-600 rounded text-lg font-bold '>Get Weather</button>
                         </div>
-                        <div className='text-white mt-20 lg:inline hidden'>
-                            <div className="font-semibold text-8xl">{`${feel ? `${feel}℃` : ""}`}</div>
+                        <div className='text-white md:inline hidden'>
+                            <div className="font-semibold pt-40 text-8xl">{`${feel ? `${feel}℃` : ""}`}</div>
                             {/* <div className={`font-semibold ${feel ? "" : "hidden"} text-4xl`}>{feel}</div> */}
                             <div className='py-4 text-3xl'>{name} <span>{country}</span></div>
                             <div className='font-medium text-xl'>{descption} <span>❄🌬🌀🌈🌂☂🌊</span></div>
                         </div>
                     </form>
                 </div>
-                <div className=' rounded-x lg:w-2/6 w-full  h-[100%] md:px-10 px-3 py-4 bg-gray-950 opacity-60 text-white  shadow-2xl shadow-gray-500'>
+                <div className=' rounded-xl lg:w-2/6 w-full  h-[100%] md:px-10 px-3  py-4 bg-gray-950 opacity-60 text-white  shadow-2xl shadow-gray-500'>
                     <div className='font-bold md:my-12 my-4 md:text-start text-center text-xl'>Weather Details</div>
                     <div className='flex '>
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Location</div>
@@ -100,7 +87,7 @@ const Get = () => {
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Pressure</div>
                         <div className='w-1/3 py-3 font-medium text-md'>{pressure}</div>
                     </div>
-                    <hr className='md:my-7 my-5' />
+                    <hr className='my-7' />
                     <div className='flex '>
                         <div className='w-2/3 py-3 font-bold text-lg opacity-60'>Max</div>
                         <div className='w-1/3 py-3 font-medium text-md'>{max}</div>
