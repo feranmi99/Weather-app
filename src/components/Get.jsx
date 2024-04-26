@@ -62,8 +62,8 @@ const Get = () => {
                     <div className='md:w-3/5 md:mt-200 pt-8 mx-auto md:ms-0 ms-5'>
                         <form onSubmit={handleSubmit} className='md:mx-5'>
                             <div class="relative mx-auto flex md:mb-32 mb-5 ">
-                                <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" required className="md:w-3/5 bg-white rounded border-none bg-transparent ring-2 border-gray-300 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-base text-lg focus:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-                                <button type="submit" className='inline-flex ring-2 text-white bg-indigo-500 border-0 py-1 p-1 md:p-2 focus:outline-none hover:bg-indigo-600 rounded text-lg font-bold '>Get Weather</button>
+                                <input type="text" value={city} onChange={handleCityChange} placeholder="Enter city" required className="md:w-3/5 bg-white rounded-l-lg border-none bg-transparent ring-2 border-gray-300 focus:bg-white focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none font-base text-lg focus:text-black py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                                <button type="submit" className='inline-flex text-white bg-indigo-500 border-0 py-1 p-1 md:p-2 focus:outline-none hover:bg-indigo-600 rounded-r-lg text-lg font-bold '>Get Weather</button>
                             </div>
                             <div className='text-white md:inline hidden'>
                                 <div className="font-semibold pt-40 text-8xl">{`${feel ? `${feel}℃` : ""}`}</div>
